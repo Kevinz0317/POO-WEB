@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+        
+	<title>Fondo de Star Wars</title>
+	<style>
+		body {
+			background-image: url('https://st2.depositphotos.com/5269633/45807/i/450/depositphotos_458074174-stock-photo-march-2021-display-baby-yoda.jpg');
+			background-size: cover;
+			background-position: center;
+			background-attachment: fixed;
+			opacity: 1;
+		}
+
+		h1 {
+			color: white;
+			font-size: 72px;
+			text-align: center;
+			margin-top: 150px;
+		}
+                input[type="text"] {
+			display: block;
+			margin: 0 auto;
+			padding: 10px;
+			font-size: 18px;
+			border-radius: 10px;
+			border: none;
+			outline: none;
+		}
+		input[type="number"] {
+			display: block;
+			margin: 0 auto;
+			padding: 10px;
+			font-size: 18px;
+			border-radius: 10px;
+			border: none;
+			outline: none;
+		}
+		input[type="button"] {
+			display: block;
+			margin: 0 auto;
+			padding: 10px;
+			font-size: 18px;
+			border-radius: 10px;
+			border: none;
+			outline: none;
+		}
+	</style>
+</head>
+<body>
+    <form action="ProcesarDatosServlet" method="post">
+        
+
+    
+        
+	<h1>HOLA</h1>
+        <label for="naves"></label>
+        <input placeholder="Eliga el tipo de Nave" type="text" list="naves" name="naveselegidas" id="naveselegidas">
+        <datalist id="naves">
+            <option value="Halcon Milenario">
+            <option value="Destructor Estelar">
+            <option value="Lanzadera Imperial">
+            <option value="Supremacy">
+            <option value="At-At">
+        </datalist>
+        
+	<input type="number" id="a" placeholder="Numero de Personas">
+	<input type="number" id="b" placeholder="Numero de naves">
+	<input type="number" id="c" placeholder="Consumo de gasolina">
+
+        
+        <div id="campo-de-texto" style="display:none;">
+            <label for="supre"></label>
+            <input placeholder="Cuantas Naves va a cargar" type="text" name="supre" id="supre">
+        </div>
+        
+        
+            <input  type="submit" value="Enviar">
+
+            
+    </form>
+    
+    <script>
+        document.getElementById("naves-elegidas").addEventListener("input", function() {
+  var seleccion = document.getElementById("naves-elegidas").value;
+  if (seleccion === "Supremacy") {
+    document.getElementById("campo-de-texto").style.display = "block";
+  } else {
+    document.getElementById("campo-de-texto").style.display = "none";
+  }
+});
+    function msg() {
+    alert("Hello world!");
+    }
+</script>
+</body>
+</html>
